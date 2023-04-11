@@ -1,4 +1,17 @@
-function result() {
+// ===== The date that is placed at the footer =====
+const date = new Date()
+const cYear = date.getFullYear()
+document.querySelector('.year').innerHTML = cYear
+
+let result = document.getElementById("result");
+
+function closeResult(){
+    result.classList.remove("open-up");
+    document.location.reload();
+}
+
+function openResult() {
+    result.classList.add("open-up");
     var students = {
 
         CHOICE: {
@@ -53,7 +66,7 @@ function result() {
     var second = document.getElementById("second");
     var third = document.getElementById("third");
     var fourth = document.getElementById("fourth");
-    var ninth = document.getElementById("ninth");
+    var check_result = document.getElementById("check_result");
 
 
     if (definition == students.CHOICE) {
@@ -62,43 +75,45 @@ function result() {
         second.innerHTML = definition.English;
         third.innerHTML = definition.Physics;
         fourth.innerHTML = definition.Chemistry;
-        ninth.innerHTML = definition.Total;
+        check_result.innerHTML = definition.Total;
     } else if (definition == students.PAUL) {
         output.innerHTML = '<hr> NOTIFICATION OF RESULTS. <hr>';
         first.innerHTML = definition.Math;
         second.innerHTML = definition.English;
         third.innerHTML = definition.Physics;
         fourth.innerHTML = definition.Chemistry;
-        ninth.innerHTML = definition.Total;
+        check_result.innerHTML = definition.Total;
     } else if (definition == students.GBOLAHAN) {
         output.innerHTML = '<hr> NOTIFICATION OF RESULTS. <hr>';
         first.innerHTML = definition.Lit;
         second.innerHTML = definition.English;
         third.innerHTML = definition.Gov;
         fourth.innerHTML = definition.Crk;
-        ninth.innerHTML = definition.Total;
+        check_result.innerHTML = definition.Total;
     } else if (definition == students.PROMISE) {
         output.innerHTML = '<hr> NOTIFICATION OF RESULTS. <hr>';
         first.innerHTML = definition.Biology;
         second.innerHTML = definition.English;
         third.innerHTML = definition.Physics;
         fourth.innerHTML = definition.Chemistry;
-        ninth.innerHTML = definition.Total;
+        check_result.innerHTML = definition.Total;
     } else if (definition == students.COMFORT) {
         output.innerHTML = '<hr> NOTIFICATION OF RESULTS. <hr>';
         first.innerHTML = definition.Biology;
         second.innerHTML = definition.English;
         third.innerHTML = definition.Physics;
         fourth.innerHTML = definition.Chemistry;
-        ninth.innerHTML = definition.Total;
+        check_result.innerHTML = definition.Total;
     } else if (definition == students.EMMANUEL) {
         output.innerHTML = '<hr> NOTIFICATION OF RESULTS. <hr>';
         first.innerHTML = definition.Lit;
         second.innerHTML = definition.English;
         third.innerHTML = definition.Gov;
         fourth.innerHTML = definition.Crk;
-        ninth.innerHTML = definition.Total;
+        check_result.innerHTML = definition.Total;
     } else {
         output.innerHTML = '<hr> There is no information about this Student. <hr> Check name and try again';
     };
 };
+
+
